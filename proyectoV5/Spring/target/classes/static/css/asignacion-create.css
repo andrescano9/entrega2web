@@ -1,0 +1,71 @@
+
+
+.asignacion-create {
+    background-color: #f9f9f9; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.asignacion-create h1 {
+    color: rgb(100, 100, 100);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 10px;
+}
+
+label {
+    font-weight: bold;
+    color: #000000; /* Color del texto de las etiquetas */
+    margin-right: 10px;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #ff0000; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff0000; /* Color de fondo del botón en hover */
+}
+
+.back-button {
+    margin-top: 20px;
+}
+
+.back-button a {
+    text-decoration: none;
+    color: #ff0000; /* Color del enlace de volver */
+    font-size: 16px;
+}
+
+.back-button a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,3 @@
+2024-10-12 12:58:25.088085-05:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CONDUCTORES" not found; SQL statement:
+select * from conductores [42102-224]

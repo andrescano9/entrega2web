@@ -1,0 +1,27 @@
+###
+GET http://localhost:8080/asignacion/list
+
+###
+GET http://localhost:8080/asignacion/view/1
+
+
+###
+GET http://localhost:8080/conductor/list
+
+
+
+### Leer todos los Buses
+GET http://localhost:8080/bus/list
+
+
+### Leer un Bus específico
+GET http://localhost:8080/bus/view/1
+Accept: application/json
+
+
+
+### Leer todos los Buses
+GET http://localhost:8080/rutas/list
+
+###
+GET http://localhost:8080/horarios/list

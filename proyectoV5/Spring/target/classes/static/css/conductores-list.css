@@ -1,0 +1,104 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    margin: 50px 0;
+    color: rgb(100, 100, 100);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 0;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    background-color: rgb(255, 255, 255);
+    margin: 20px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid rgb(100, 100, 100);
+    text-align: left;
+}
+
+thead {
+    background-color: rgb(120, 196, 248);
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgb(245, 245, 245);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: rgb(255, 255, 255);
+}
+
+th {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+table a {
+    display: block;
+    padding: 5px 10px;
+    background-color: rgb(120, 196, 248);
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+table a:hover {
+    background-color: rgb(100, 175, 225);
+}
+
+table form a {
+    display: block;
+    padding: 5px 10px;
+    background-color: rgb(240, 128, 128);
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+table form a:hover {
+    background-color: rgb(220, 100, 100);
+}
+
+/* Estilo para el botón de crear */
+.create-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(120, 196, 248);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.create-button:hover {
+    background-color: rgb(100, 175, 225);
+    transform: scale(1.05);
+}
+
+.create-button:active {
+    background-color: rgb(80, 155, 200);
+}

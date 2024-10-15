@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Conductor</title>
+    <link rel="stylesheet" href="/css/conductores-create.css">
+</head>
+
+<body>
+    <div class="formcontainer">
+        <h1>Crear Conductor</h1>
+        <form th:action="@{/conductor/create}" th:object="${conductor}" method="post">
+            <label for="conductorName">Nombre: </label>
+            <input type="text" th:field="*{name}" id="conductorName" required>
+            <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="error"></span>
+
+            <label for="conductorCC">Cédula: </label>
+            <input type="number" th:field="*{cc}" id="conductorCC" required>
+            <span th:if="${#fields.hasErrors('cc')}" th:errors="*{cc}" class="error"></span>
+
+            <label for="conductorPhone">Celular: </label>
+            <input type="number" th:field="*{phone}" id="conductorPhone" required>
+            <span th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}" class="error"></span>
+
+            <label for="conductorAdress">Dirección: </label>
+            <input type="text" th:field="*{adress}" id="conductorAdress" required>
+            <span th:if="${#fields.hasErrors('adress')}" th:errors="*{adress}" class="error"></span>
+
+            <!-- Mensaje de error -->
+            <div th:if="${error}" class="error-message">
+                <p th:text="${error}"></p>
+            </div>
+
+            <button type="submit">Crear</button>
+        </form>
+    </div>
+
+    <a th:href="@{/conductor/list}" class="cancel-button">Cancelar</a>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Crear Asignación</title>
+    <link rel="stylesheet" th:href="@{/css/header-Footer.css}">
+    <link rel="stylesheet" th:href="@{/css/asignacion-create.css}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <p class="logo">TransmiApp</p>
+            <nav>
+                <a href="/index.html">Inicio</a>
+                <a href="/conductor/list">Conductores</a>
+                <a href="/conductor/list">Horarios</a>
+                <a href="/conductor/list">Rutas</a>
+                <a href="/asignacion/list">Asignaciones</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="asignacion-create">
+        <h1>Crear Nueva Asignación</h1>
+        <form action="/asignacion/crear" method="post">
+            <table>
+                <tr>
+                    <td><label for="bus">Selecciona un Bus:</label></td>
+                    <td>
+                        <select name="busId" id="bus">
+                            <option th:each="bus : ${buses}" th:value="${bus.id}" th:text="${bus.placa}"></option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="conductor">Selecciona un Conductor:</label></td>
+                    <td>
+                        <select name="conductorId" id="conductor">
+                            <option th:each="conductor : ${conductores}" th:value="${conductor.id}" th:text="${conductor.name}"></option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="horario">Selecciona un Horario:</label></td>
+                    <td>
+                        <select name="horarioId" id="horario">
+                            <option th:each="horario : ${horarios}" th:value="${horario.id}" th:text="${horario.horaInicio}"></option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="ruta">Selecciona una Ruta:</label></td>
+                    <td>
+                        <select name="rutaId" id="ruta">
+                            <option th:each="ruta : ${rutas}" th:value="${ruta.id}" th:text="${ruta.nombre}"></option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button type="submit">Guardar Asignación</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+        <!-- Botón de Volver a la Lista de Asignaciones -->
+        <div class="back-button">
+            <a href="/asignacion/list" class="button">Cancelar</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h3>Enlaces Útiles</h3>
+                    <ul>
+                        <li><a href="/index.html">Inicio</a></li>
+                        <li><a href="/conductor/list">Conductores</a></li>
+                        <li><a href="/conductor/list">Rutas</a></li>
+                        <li><a href="/conductor/list">Horarios</a></li>
+                        <li><a href="/asignacion/list">Asignaciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>Email: <a href="mailto:info@transmiapp.com">info@transmiapp.com</a></p>
+                    <p>Teléfono: +57 123 456 7890</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank">Facebook</a>
+                        <a href="https://twitter.com" target="_blank">Twitter</a>
+                        <a href="https://instagram.com" target="_blank">Instagram</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <p>&copy; TransmiApp 2024</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+
+    <form method="get" action="#" th:action="@{/conductor/search}">
+        <label for="searchText">Buscar por Nombre</label>
+        <input type="text" id="searchText" name="searchText">
+        <button type="submit">Search</button>
+    </form>
+
+    <h1>Conductores</h1>
+    <table class="entity-list">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Cédula</th>
+                <th>Celular</th>
+                <th>Direccion</th>
+                <th>Ver</th>
+                <th>Editar</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr th:each="c : ${conductor}" th:if="${c.name}">
+                <td th:text="${c.name}"></td>
+                <td th:text="${c.cc}"></td>
+                <td th:text="${c.phone}"></td>
+                <td th:text="${c.adress}"></td>
+                <td>
+                    <a th:href="@{/conductor/view/{id}(id=${c.id})}">Ver</a>
+                </td>
+                <td>
+                    <a th:href="@{/conductor/edit-form/{id}(id=${c.id})}">Editar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TransmiApp</title>
+    <link rel="stylesheet" th:href="@{/css/header-Footer.css}">
+    <link rel="stylesheet" href="/css/conductores-list.css">
+    <link rel="stylesheet" href="/css/search-form.css">
+    <style>
+        /* Estilo para el botón de crear */
+        .create-button {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <p class="logo">TransmiApp</p>
+            <nav>
+                <a href="/index.html">Inicio</a>
+                <a href="/conductor/list">Conductores</a>
+                <a href="/conductor/list">Horarios</a>
+                <a href="/conductor/list">Rutas</a>
+                <a href="/asignacion/list">Asignaciones</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Formulario de búsqueda 
+    <form method="get" action="#" th:action="@{/conductor/search}">
+        <label for="searchText">Buscar por Nombre:</label>
+        <input type="text" id="searchText" name="searchText">
+        <button type="submit">Buscar</button>
+    </form>
+    -->
+
+    <main id="conductores">
+        <section>
+            <h1>Lista de Conductores</h1>
+
+            <!-- Botón de crear -->
+            <a href="/conductor/create-form" class="create-button">Crear Conductor</a>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Cédula</th>
+                        <th>Teléfono</th>
+                        <th>Dirección</th>
+                        <th>Ver</th>
+                        <th>Editar</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="conductor : ${listaconductores}">
+                        <td th:text="${conductor.name}">Nombre</td>
+                        <td th:text="${conductor.cc}">Cédula</td>
+                        <td th:text="${conductor.phone}">Teléfono</td>
+                        <td th:text="${conductor.adress}">Dirección</td>
+                        <td>
+                            <a th:href="@{/conductor/view/{id}(id=${conductor.id})}">Ver</a>
+                        </td>
+                        <td>
+                            <a th:href="@{/conductor/edit-form/{id}(id=${conductor.id})}">Editar</a>
+                        </td>
+                        <td>
+                            <form th:action="@{/conductor/delete/{id}(id=${conductor.id})}" method="post" 
+                                  onsubmit="return confirm('¿Estás seguro de que deseas eliminar este conductor?');">
+                                <a href="#" onclick="this.closest('form').submit(); return false;">Eliminar</a>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h3>Enlaces Útiles</h3>
+                    <ul>
+                        <li><a href="/index.html">Inicio</a></li>
+                        <li><a href="/conductor/list">Conductores</a></li>
+                        <li><a href="/conductor/list">Rutas</a></li>
+                        <li><a href="/conductor/list">Horarios</a></li>
+                        <li><a href="/asignacion/list">Asignaciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>Email: <a href="mailto:info@transmiapp.com">info@transmiapp.com</a></p>
+                    <p>Teléfono: +57 123 456 7890</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank">Facebook</a>
+                        <a href="https://twitter.com" target="_blank">Twitter</a>
+                        <a href="https://instagram.com" target="_blank">Instagram</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <p>&copy; TransmiApp 2024</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

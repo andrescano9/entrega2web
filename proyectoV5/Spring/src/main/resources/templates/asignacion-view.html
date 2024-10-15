@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Vista de Asignación</title>
+    <link rel="stylesheet" th:href="@{/css/header-Footer.css}">
+    <link rel="stylesheet" th:href="@{/css/asignacion-view.css}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <p class="logo">TransmiApp</p>
+            <nav>
+                <a href="/index.html">Inicio</a>
+                <a href="/conductor/list">Conductores</a>
+                <a href="/horario/list">Horarios</a>
+                <a href="/ruta/list">Rutas</a>
+                <a href="/asignacion/list">Asignaciones</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="asignacion">
+        <section>
+            <h1>Vista de Asignación</h1>    
+            <ul class="asignacion-info">
+                <li th:text="|ID: ${asignacionDTO.id}|">ID</li>
+                <li th:text="|Bus : ${asignacionDTO.busPlaca != null ? asignacionDTO.busPlaca : 'Sin bus asignado'}|">Bus</li>
+                <li th:text="|Conductor: ${asignacionDTO.conductorNombre != null ? asignacionDTO.conductorNombre : 'Sin conductor asignado'}|">Conductor</li>
+                <li th:text="|Horario Inicio: ${asignacionDTO.horarioInicio != null ? asignacionDTO.horarioInicio : 'Sin horario asignado'}|">Horario Inicio</li>
+                <li th:text="|Horario Fin: ${asignacionDTO.horarioFin != null ? asignacionDTO.horarioFin : 'Sin horario asignado'}|">Horario Fin</li>
+                <li th:text="|Día Semana: ${asignacionDTO.diaSemana != null ? asignacionDTO.diaSemana : 'Sin día asignado'}|">Día de la Semana</li>
+                <li th:text="|Ruta: ${asignacionDTO.rutaNombre != null ? asignacionDTO.rutaNombre : 'Sin ruta asignada'}|">Ruta</li>
+
+            </ul>
+            <a href="#" th:href="@{/asignacion/edit-form/{id}(id=${asignacion.id})}" class="button">Editar Asignación</a>
+            <a href="/asignacion/list" class="button">Volver </a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h3>Enlaces Útiles</h3>
+                    <ul>
+                        <li><a href="/index.html">Inicio</a></li>
+                        <li><a href="/conductor/list">Conductores</a></li>
+                        <li><a href="/horario/list">Horarios</a></li>
+                        <li><a href="/ruta/list">Rutas</a></li>
+                        <li><a href="/asignacion/list">Asignaciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>Email: <a href="mailto:info@transmiapp.com">info@transmiapp.com</a></p>
+                    <p>Teléfono: +57 123 456 7890</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank">Facebook</a>
+                        <a href="https://twitter.com" target="_blank">Twitter</a>
+                        <a href="https://instagram.com" target="_blank">Instagram</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <p>&copy; TransmiApp 2024</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

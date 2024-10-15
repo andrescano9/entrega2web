@@ -1,0 +1,256 @@
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+.color-acento{ color:rgb(255, 0, 0); }
+
+
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("https://www.transmilenio.gov.co/info/transmilenio/media/pubInt/thumbs/thpub_700x400_151656.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 90vh; /* Aumenta la altura para dar más espacio */
+    padding: 20px; /* Agrega espacio interno para evitar que el contenido quede pegado a los bordes */
+    box-sizing: border-box; /* Asegura que el padding se incluya en la altura total */
+}
+
+#hero h1{
+    color: white;
+}
+
+#hero button{
+    font-size: 1.75em;
+    margin-top: 20px; /* Agrega espacio arriba del botón */
+}
+
+#somos-transmiApp .container{
+    text-align: center;
+    padding: 200px 12px;
+}
+
+#Informacion{
+    background-color: rgb(30,30,30);
+    color: white;
+    text-align: center;
+}
+
+#Informacion .container{
+    padding: 150px 12px;
+}
+
+#Informacion h2{
+    margin-top: 0;
+    font-size: 3.2em;
+}
+
+#Informacion p{
+    display: none;
+}
+
+#Informacion .carta{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px 0px;
+    margin: 30px;
+    border-radius: 15px;
+}
+
+.carta:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),url("https://www.portafolio.co/files/article_content/uploads/2018/08/13/5b71e2cf88d5f.jpeg");
+
+}
+
+.carta:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("https://www.sitp.gov.co/publicaciones/40236/mapas-transmilenio/info/sitp/media/img75080.jpg");
+}
+
+.carta:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("https://pbs.twimg.com/media/BfBZ0O0CIAEN6h1.jpg");
+
+}
+
+#caracteristicas_de_vehiculos .container{
+    text-align: center;
+    padding: 250px 12px;
+}
+
+#caracteristicas_de_vehiculos li{
+    margin: 16px 0px;
+    font-weight: bold;
+}
+
+#aplicar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(30,30,30);
+    color: white;
+    height: 90vh; /* Aumenta la altura para dar más espacio */
+    padding: 20px; /* Agrega espacio interno para evitar que el contenido quede pegado a los bordes */
+    box-sizing: border-box; /* Asegura que el padding se incluya en la altura total */
+}
+
+#aplicar h2{
+    font-size: 9vw;
+}
+
+#aplicar button{
+    font-size: 5vw;
+    margin-top: 20px; /* Agrega espacio arriba del botón */
+    
+}
+
+
+
+@media (min-width: 850px){
+    #hero h1{
+        font-size: 5em;
+    }
+
+    #somos-transmiApp .container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #somos-transmiApp .texto{
+        width: 50%;
+        max-width: 600px;
+        text-align: initial;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #somos-transmiApp h2{
+        margin-top: 0px;
+    }
+
+    #somos-transmiApp .img-container{
+        background-image: url("https://www.transmilenio.gov.co/publicaciones/151652/transmilenio-cierra-tres-estaciones-por-prevencion/info/transmilenio/media/pubInt151652.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        width: 800px; 
+    }
+
+    #Informacion .Apartados{
+        display: flex;
+        justify-content: center;
+    }
+
+    #Informacion p{
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    #Informacion h2{
+        font-size: 4em;
+    }
+
+    #Informacion h3{
+        margin-top: 0;
+    }
+
+    #Informacion .carta{
+        padding: 50px;
+        background-size: 100% 150px;
+        background-repeat: no-repeat;
+        background-position-y: 0;
+        background-color: rgba(50, 50, 50, 1);
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    }
+
+    .carta:first-child{
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        ),url("media/front-end-cropped.jpg");
+
+    }
+
+    .carta:nth-child(2){
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        ),url("media/full-stack-cropped.jpg");
+    }
+
+    .carta:nth-child(3){
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("media/python-cropped.jpg");
+
+    }
+
+    #caracteristicas_de_vehiculos{
+        background-image: url("media/background-2.jpeg");
+        background-repeat: no-repeat;
+        background-size: 500px 400px;
+        background-position: calc(100vw - 500px) 120px;
+    }
+
+    #caracteristicas_de_vehiculos .container{
+        text-align: initial;
+    }
+
+    #caracteristicas_de_vehiculos ul{
+        margin-left: 100px;
+    }
+
+    #aplicar h2{
+        font-size: 5em;
+    }
+
+    #aplicar button{
+        font-size: 2em;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    #caracteristicas_de_vehiculos{
+        background-position-x: calc(100vw - 800px);
+    }
+}
+
+
+
+/*
+LINKS
+*/
+
+

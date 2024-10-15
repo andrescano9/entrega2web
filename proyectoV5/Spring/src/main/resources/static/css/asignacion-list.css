@@ -1,0 +1,128 @@
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.asignacion-list {
+    padding: 90px 20px 20px; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.asignacion-list h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: rgb(100, 100, 100);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f5f5f5;
+    color: #333;
+    font-weight: bold;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.asignacion-list a.button, .asignacion-list a {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-top: 15px;
+    color: #fff;
+    background-color: rgb(255, 0, 0);
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.asignacion-list a.button:hover, .asignacion-list a:hover {
+    background-color: #78c4f8;
+}
+
+.back-button {
+    text-align: center;
+    margin-top: 30px;
+}
+
+footer {
+    background-color: #e6e6e6;
+    padding: 20px 0;
+    border-top: 2px solid #c8c8c8;
+    margin-top: auto;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+}
+
+footer .footer-links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 10px;
+}
+
+footer .footer-section {
+    flex: 1;
+    margin: 0 10px;
+}
+
+footer .footer-section h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+footer .footer-section ul {
+    padding: 0;
+    margin: 0;
+}
+
+footer .footer-section ul li {
+    margin: 5px 0;
+}
+
+footer .footer-section ul li a {
+    color: #646464;
+    text-decoration: none;
+}
+
+footer .footer-section ul li a:hover {
+    color: #78c4f8;
+}
+
+footer .footer-section .social-links a {
+    margin: 0 10px;
+    color: #646464;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+footer .footer-section .social-links a:hover {
+    color: #78c4f8;
+}

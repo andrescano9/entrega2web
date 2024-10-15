@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>conductor view</title>
+    <link rel="stylesheet" th:href="@{/css/header-Footer.css}">
+    <link rel="stylesheet" href="/css/conductores-view.css">
+
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <p class="logo">TransmiApp</p>
+            <nav>
+                <a href="/index.html">Inicio</a>
+                <a href="/conductor/list">Conductores</a>
+                <a href="/conductor/list">Horarios</a>
+                <a href="/conductor/list">Rutas</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="conductor">
+    <section>
+    <h1>Vista de Conductor</h1>
+    <ul class="conductor-info">
+        <li th:text="|Nombre: ${conductor.name}|">a</li>
+        <li th:text="|Cédula: ${conductor.cc}|">b</li>
+        <li th:text="|Teléfono: ${conductor.phone}|">c</li>
+        <li th:text="|Dirección: ${conductor.adress}|">d</li>
+    </ul>
+</section>
+</main>
+
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h3>Enlaces Útiles</h3>
+                    <ul>
+                        <li><a href="/index.html">Inicio</a></li>
+                        <li><a href="/conductor/list">Conductores</a></li>
+                        <li><a href="/conductor/list">Rutas</a></li>
+                        <li><a href="/conductor/list">Horarios</a></li>
+                        <li><a href="/asignacion/list">Asignaciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>Email: <a href="mailto:info@transmiapp.com">info@transmiapp.com</a></p>
+                    <p>Teléfono: +57 123 456 7890</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank">Facebook</a>
+                        <a href="https://twitter.com" target="_blank">Twitter</a>
+                        <a href="https://instagram.com" target="_blank">Instagram</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <p>&copy; TransmiApp 2024</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
